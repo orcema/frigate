@@ -109,10 +109,9 @@ According to [this discussion](https://github.com/blakeblackshear/frigate/issues
 go2rtc:
   streams:
     your_reolink_camera: 
-      - http://reolink_ip/flv?port=1935&app=bcs&stream=channel0_main.bcs&user=username&password=password
-      - "ffmpeg:your_reolink_camera#audio=opus"
+      - "ffmpeg:http://reolink_ip/flv?port=1935&app=bcs&stream=channel0_main.bcs&user=username&password=password#video=copy#audio=copy#audio=opus"
     your_reolink_camera_sub: 
-      - http://reolink_ip/flv?port=1935&app=bcs&stream=channel0_ext.bcs&user=username&password=password
+      - "ffmpeg:http://reolink_ip/flv?port=1935&app=bcs&stream=channel0_ext.bcs&user=username&password=password"
 
 cameras:
   reolink:
